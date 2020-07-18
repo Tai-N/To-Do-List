@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.todos-list {
+  height: 30rem;
+  width: 30rem;
+}
+
+.input-main {
+  width: 100%;
+  border: 0.2rem solid lightgray;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.todo {
+  display: block;
+  margin: 0 auto;
+  width: 25.5rem;
+  border: 0.2rem solid lightgray;
+  border-top: none;
+  padding: 1rem;
+}
