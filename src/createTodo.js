@@ -11,7 +11,6 @@ const todosList = (() => {
 })();
 
 const createTodo = (() => {
-
   const add = () => {
     const mainInput = document.querySelector(".input-main");
     let textEntered = mainInput.value;

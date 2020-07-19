@@ -111,7 +111,6 @@ const todosList = (() => {
 })();
 
 const createTodo = (() => {
-
   const add = () => {
     const mainInput = document.querySelector(".input-main");
     let textEntered = mainInput.value;
@@ -229,10 +228,8 @@ const editTodo = (() => {
     const todoText = document.getElementById(`todo-text-${checkBoxIdNum}`);
 
     if (checkBoxClicked.checked) {
-      _createTodo_js__WEBPACK_IMPORTED_MODULE_0__["todosList"].todos[checkBoxIdNum].completed = true;
       todoText.style.textDecoration = "line-through";
     } else if (checkBoxClicked.checked === false) {
-      _createTodo_js__WEBPACK_IMPORTED_MODULE_0__["todosList"].todos[checkBoxIdNum].completed = false;
       todoText.style.textDecoration = "none";
     }
   };

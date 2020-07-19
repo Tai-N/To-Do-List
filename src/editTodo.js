@@ -10,10 +10,8 @@ const editTodo = (() => {
     const todoText = document.getElementById(`todo-text-${checkBoxIdNum}`);
 
     if (checkBoxClicked.checked) {
-      todosList.todos[checkBoxIdNum].completed = true;
       todoText.style.textDecoration = "line-through";
     } else if (checkBoxClicked.checked === false) {
-      todosList.todos[checkBoxIdNum].completed = false;
       todoText.style.textDecoration = "none";
     }
   };
