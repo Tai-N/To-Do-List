@@ -1,4 +1,4 @@
-import { Display } from "./display";
+// import { Display } from "./display";
 import { indexOf } from "lodash";
 
 const TodoFactory = (text, completed, id) => {
@@ -12,7 +12,7 @@ const TodoManager = (() => {
     const todo = TodoFactory(todoText);
     todos.push(todo);
 
-    Display.render();
+    // Display.render();
   };
 
   const edit = (newText, idNum) => {
@@ -22,7 +22,7 @@ const TodoManager = (() => {
       }
     });
 
-    Display.render();
+    // Display.render();
   };
 
   const deleteTodo = (idNum) => {
@@ -32,7 +32,7 @@ const TodoManager = (() => {
       }
     });
 
-    Display.render();
+    // Display.render();
   };
 
   const markCompleted = (idNum) => {
@@ -42,7 +42,7 @@ const TodoManager = (() => {
       }
     });
 
-    Display.render();
+    // Display.render();
   };
 
   return { todos, add, edit, deleteTodo, markCompleted };

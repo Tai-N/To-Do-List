@@ -17459,10 +17459,9 @@ _display__WEBPACK_IMPORTED_MODULE_2__["Display"].render();
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TodoManager", function() { return TodoManager; });
-/* harmony import */ var _display__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./display */ "./src/display.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
-
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+// import { Display } from "./display";
 
 
 const TodoFactory = (text, completed, id) => {
@@ -17476,7 +17475,7 @@ const TodoManager = (() => {
     const todo = TodoFactory(todoText);
     todos.push(todo);
 
-    _display__WEBPACK_IMPORTED_MODULE_0__["Display"].render();
+    // Display.render();
   };
 
   const edit = (newText, idNum) => {
@@ -17486,7 +17485,7 @@ const TodoManager = (() => {
       }
     });
 
-    _display__WEBPACK_IMPORTED_MODULE_0__["Display"].render();
+    // Display.render();
   };
 
   const deleteTodo = (idNum) => {
@@ -17496,7 +17495,7 @@ const TodoManager = (() => {
       }
     });
 
-    _display__WEBPACK_IMPORTED_MODULE_0__["Display"].render();
+    // Display.render();
   };
 
   const markCompleted = (idNum) => {
@@ -17506,7 +17505,7 @@ const TodoManager = (() => {
       }
     });
 
-    _display__WEBPACK_IMPORTED_MODULE_0__["Display"].render();
+    // Display.render();
   };
 
   return { todos, add, edit, deleteTodo, markCompleted };
