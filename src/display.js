@@ -19,7 +19,7 @@ const Display = (() => {
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <input type="checkbox" class="checkbox" id="todo-checkbox-${todo.id}"/>
+            <input type="checkbox" onclick="return false;" class="checkbox" id="todo-checkbox-${todo.id}"/>
           </div>
         </div>
 

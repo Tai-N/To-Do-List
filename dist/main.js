@@ -17347,7 +17347,7 @@ const Display = (() => {
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <input type="checkbox" class="checkbox" id="todo-checkbox-${todo.id}"/>
+            <input type="checkbox" onclick="return false;" class="checkbox" id="todo-checkbox-${todo.id}"/>
           </div>
         </div>
 
@@ -17444,7 +17444,7 @@ __webpack_require__.r(__webpack_exports__);
 // ? index. js typically handles your app startup, routing and other functions of your application
 
 _eventHandler__WEBPACK_IMPORTED_MODULE_1__["EventHandler"];
-_display__WEBPACK_IMPORTED_MODULE_2__["Display"].render();
+// Display.render();
 
 
 /***/ }),
@@ -17459,9 +17459,10 @@ _display__WEBPACK_IMPORTED_MODULE_2__["Display"].render();
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TodoManager", function() { return TodoManager; });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-// import { Display } from "./display";
+/* harmony import */ var _display__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./display */ "./src/display.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 const TodoFactory = (text, completed, id) => {
@@ -17475,7 +17476,7 @@ const TodoManager = (() => {
     const todo = TodoFactory(todoText);
     todos.push(todo);
 
-    // Display.render();
+    _display__WEBPACK_IMPORTED_MODULE_0__["Display"].render();
   };
 
   const edit = (newText, idNum) => {
@@ -17485,7 +17486,7 @@ const TodoManager = (() => {
       }
     });
 
-    // Display.render();
+    _display__WEBPACK_IMPORTED_MODULE_0__["Display"].render();
   };
 
   const deleteTodo = (idNum) => {
@@ -17495,7 +17496,7 @@ const TodoManager = (() => {
       }
     });
 
-    // Display.render();
+    _display__WEBPACK_IMPORTED_MODULE_0__["Display"].render();
   };
 
   const markCompleted = (idNum) => {
@@ -17505,7 +17506,7 @@ const TodoManager = (() => {
       }
     });
 
-    // Display.render();
+    _display__WEBPACK_IMPORTED_MODULE_0__["Display"].render();
   };
 
   return { todos, add, edit, deleteTodo, markCompleted };
