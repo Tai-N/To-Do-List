@@ -1,32 +1,8 @@
-import { createTodo } from "./createTodo.js";
-import { display } from "./display";
-import { deleteTodo } from "./deleteTodo";
-import { editTodo } from "./editTodo";
+import { TodoManager } from "./todoManager";
+import { EventHandler } from "./eventHandler";
+import { Display } from "./display";
 
-const eventsHandler = (() => {
-  const mainInput = document.querySelector(".input-main");
-  const listOfCreatedTodos = document.querySelector(".list");
+// ? index. js typically handles your app startup, routing and other functions of your application
 
-  // create/add todo when user press enters on main input field
-  mainInput.addEventListener("keypress", function (e) {
-    if (e.key === "Enter") {
-      createTodo.add();
-      display.render();
-    }
-  });
-
-  // listen for events on the created todos
-  listOfCreatedTodos.addEventListener("click", (e) => {
-    if (e.target.classList.contains("btn-delete")) {
-      let deleteBtnIdNum = parseInt(e.target.id.substr(-1));
-      deleteTodo.todosToDelete.unshift(deleteBtnIdNum);
-      deleteTodo.deleteIt();
-    }
-
-    if (e.target.classList.contains("checkbox")) {
-      let checkBoxIdNum = parseInt(e.target.id.substr(-1));
-      editTodo.todosToEdit.unshift(checkBoxIdNum);
-      editTodo.markCompleted();
-    }
-  });
-})();
+EventHandler;
+Display.render();

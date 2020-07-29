@@ -1,34 +1,43 @@
-import { todosList } from "./createTodo.js";
+import { TodoManager } from "./todoManager";
 
-const display = (() => {
+const Display = (() => {
+  const list = document.querySelector(".list");
+
   const render = () => {
-    const listOfCreatedTodos = document.querySelector(".list");
-    listOfCreatedTodos.innerHTML = "";
+    list.innerHTML = "";
 
-    todosList.todos.forEach((todoObj, i) => {
-      // for each todo Obj, create a template string to display in DOM
-      let todoToDisplay = ` <div id="todo-${i}">
+    TodoManager.todos.forEach((todo) => {
+      // show if todo has been completed in DOM
+      const textStyle = todo.completed
+        ? "text-decoration: line-through;"
+        : "text-decoration: none;";
+
+      // for each todo obj, create a template string to display in DOM
+      let todoToDisplay = ` 
+    <div id="todo-item-${todo.id}">
+
       <div class="input-group">
         <div class="input-group-prepend">
           <div class="input-group-text">
-            <input type="checkbox" class="checkbox" id="checkbox-${i}"/>
+            <input type="checkbox" class="checkbox" id="todo-checkbox-${todo.id}"/>
           </div>
         </div>
-        <input type="text" id="todo-text-${i}" class="form-control form-control-lg" value="${todoObj.text}" />
+
+        <input type="text" style="${textStyle}" id="todo-input-${todo.id}" class="todo-input form-control form-control-lg" value="${todo.text}"/>
+
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary btn-delete" type="button" id="btn-delete-${i}">
-            X
-          </button>
+          <button class="btn btn-outline-secondary btn-delete" type="button" id="todo-btn-delete-${todo.id}">X</button>
         </div>
       </div>
+
     </div>`;
 
-      // add each todo before the end of each one
-      listOfCreatedTodos.insertAdjacentHTML("beforeend", todoToDisplay);
+      // add each todo to the list div before the end of each created one
+      list.insertAdjacentHTML("beforeend", todoToDisplay);
     });
   };
 
   return { render };
 })();
 
-export { display };
+export { Display };

@@ -11,12 +11,14 @@ html {
   font-size: 62.5%;
 }
 
-.todos-list {
+.todo-list {
   height: 30rem;
   width: 30rem;
+  margin: 0 auto;
+  margin-top: 30rem;
 }
 
-.input-main {
+.todo-input-main {
   width: 100%;
   border: 0.2rem solid lightgray;
   padding: 0.8rem;
